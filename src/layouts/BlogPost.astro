@@ -11,7 +11,7 @@ type Props = CollectionEntry<'blog'>['data'];
 const { title, description, pubDate, updatedDate, coverImage } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="ja">
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
@@ -29,29 +29,132 @@ const { title, description, pubDate, updatedDate, coverImage } = Astro.props;
 				border-radius: 12px;
 				box-shadow: var(--box-shadow);
 			}
+
+			/* ── 記事コンテナ ── */
 			.prose {
-				width: 720px;
+				width: 680px;
 				max-width: calc(100% - 2em);
 				margin: auto;
 				padding: 1em;
 				color: rgb(var(--gray-dark));
 			}
+
+			/* ── タイトル部分 ── */
 			.title {
-				margin-bottom: 1em;
+				margin-bottom: 2em;
 				padding: 1em 0;
 				text-align: left;
-				line-height: 1;
 			}
 			.title h1 {
-				font-size: 1.2em;
+				font-size: 1.5em;
+				font-weight: 700;
+				line-height: 1.4;
 				margin: 0 0 0.5em 0;
 			}
 			.date {
 				margin-bottom: 0.5em;
+				font-size: 0.85em;
 				color: rgb(var(--gray));
 			}
 			.last-updated-on {
 				font-style: italic;
+			}
+
+			/* ── 記事本文のタイポグラフィ ── */
+			.prose :global(h2) {
+				font-size: 1.3em;
+				font-weight: 700;
+				margin: 2.5em 0 0.8em;
+				padding-bottom: 0.3em;
+				border-bottom: 1px solid rgb(var(--gray-light));
+			}
+			.prose :global(h3) {
+				font-size: 1.15em;
+				font-weight: 700;
+				margin: 2em 0 0.6em;
+			}
+			.prose :global(h4) {
+				font-size: 1.05em;
+				font-weight: 700;
+				margin: 1.5em 0 0.5em;
+			}
+			.prose :global(p) {
+				margin-bottom: 1.5em;
+				line-height: 1.9;
+			}
+			.prose :global(ul),
+			.prose :global(ol) {
+				margin-bottom: 1.5em;
+				padding-left: 1.5em;
+			}
+			.prose :global(li) {
+				margin-bottom: 0.4em;
+				line-height: 1.8;
+			}
+
+			/* ── 画像 ── */
+			.prose :global(img) {
+				display: block;
+				max-width: 100%;
+				height: auto;
+				margin: 2em auto;
+				border-radius: 8px;
+			}
+			/* Markdownの ![alt](src) は <p><img></p> になるので余白調整 */
+			.prose :global(p:has(> img)) {
+				margin-bottom: 0.5em;
+			}
+			/* 画像キャプション: 画像直後の em を中央寄せキャプションに */
+			.prose :global(p:has(> img) + p > em:only-child) {
+				display: block;
+				text-align: center;
+				font-size: 0.85em;
+				color: rgb(var(--gray));
+				margin-top: -0.5em;
+				margin-bottom: 2em;
+			}
+
+			/* ── blockquote ── */
+			.prose :global(blockquote) {
+				border-left: 4px solid var(--accent);
+				padding: 0.5em 0 0.5em 1.2em;
+				margin: 1.5em 0;
+				font-style: italic;
+				color: rgb(var(--gray));
+				font-size: 1em;
+				background: rgba(var(--gray-light), 0.3);
+				border-radius: 0 6px 6px 0;
+			}
+			.prose :global(blockquote p) {
+				margin-bottom: 0.5em;
+			}
+			.prose :global(blockquote p:last-child) {
+				margin-bottom: 0;
+			}
+
+			/* ── テーブル ── */
+			.prose :global(table) {
+				width: 100%;
+				border-collapse: collapse;
+				margin: 1.5em 0;
+				font-size: 0.92em;
+			}
+			.prose :global(th),
+			.prose :global(td) {
+				padding: 0.6em 0.8em;
+				border: 1px solid rgb(var(--gray-light));
+				text-align: left;
+			}
+			.prose :global(th) {
+				background: rgba(var(--gray-light), 0.5);
+				font-weight: 700;
+			}
+
+			/* ── 区切り線 ── */
+			.prose :global(hr) {
+				border: none;
+				border-top: 1px solid rgb(var(--gray-light));
+				margin: 2.5em 0;
 			}
 		</style>
 	</head>
@@ -60,6 +163,11 @@ const { title, description, pubDate, updatedDate, coverImage } = Astro.props;
 		<Header />
 		<main>
 			<article>
+				{coverImage && (
+					<div class="hero-image">
+						<img src={coverImage} alt={title} />
+					</div>
+				)}
 				<div class="prose">
 					<div class="title">
 						<div class="date">
