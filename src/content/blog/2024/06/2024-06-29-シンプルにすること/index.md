@@ -2,7 +2,7 @@
 title: "シンプルにすること"
 pubDate: 2024-06-29
 description: ""
-coverImage: "DSCF2972.jpg"
+# coverImage:"DSCF2972.jpg"
 ---
 
 ミニマリストが気になり、それから断捨離、そして色々なモノを捨てていくうちにあることに気づいた。  

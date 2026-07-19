@@ -2,7 +2,7 @@
 title: "はじめまして"
 pubDate: 2024-05-08
 description: ""
-coverImage: "DSCF2076-2.jpg"
+# coverImage:"DSCF2076-2.jpg"
 ---
 
 今年の1月からblogを書き始めることを決意して早半年あまり。 ようやく書き始めることができた。

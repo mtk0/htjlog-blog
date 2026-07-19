@@ -2,7 +2,7 @@
 title: "断捨離"
 pubDate: 2024-07-09
 description: ""
-coverImage: "DSCF0775-scaled.jpg"
+# coverImage:"DSCF0775-scaled.jpg"
 ---
 
 とりあえず身の回りのものを捨ててみた。

@@ -2,7 +2,7 @@
 title: "フリーランスの老後資金計画における特養・老健費用はいくらかかるのか？"
 pubDate: 2025-09-29
 description: ""
-coverImage: "1-1-2.jpg"
+# coverImage:"1-1-2.jpg"
 ---
 
 ```

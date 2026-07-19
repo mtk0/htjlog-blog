@@ -2,7 +2,7 @@
 title: "Claude vs ChatGPT：1年間使い続けて見えた真実【後編】"
 pubDate: 2025-08-11
 description: ""
-coverImage: "eddb8a908fa14387efa350234a97d617.png"
+# coverImage:"eddb8a908fa14387efa350234a97d617.png"
 ---
 
 ## 前編を振り返って

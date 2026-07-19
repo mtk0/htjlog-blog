@@ -2,7 +2,7 @@
 title: "モノを減らすといいこと"
 pubDate: 2024-07-13
 description: ""
-coverImage: "101_1331-scaled.jpg"
+# coverImage:"101_1331-scaled.jpg"
 ---
 
 去年の秋くらいからものを減らすことを実践してます。  

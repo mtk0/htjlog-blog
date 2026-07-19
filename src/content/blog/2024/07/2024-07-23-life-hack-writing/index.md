@@ -2,7 +2,7 @@
 title: "文字を追う"
 pubDate: 2024-07-23
 description: ""
-coverImage: "cc9ef75c5b7acc0ceef1346ca07cdf86.jpg"
+# coverImage:"cc9ef75c5b7acc0ceef1346ca07cdf86.jpg"
 ---
 
 ここ最近、雑誌も読まなくなったし本屋で立ち読みというのも少なくなった気がする。気づくと駅前とかにあった本屋もあまり見かけなくなってきた。  

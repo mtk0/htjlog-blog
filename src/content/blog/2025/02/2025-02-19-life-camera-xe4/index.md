@@ -2,7 +2,7 @@
 title: "FUJIFILM X-E4が好きすぎる"
 pubDate: 2025-02-19
 description: ""
-coverImage: "5.png"
+# coverImage:"5.png"
 ---
 
 fujifilimのオンラインのカタログからもいつのまにか消えてしまっていた、X-E4。

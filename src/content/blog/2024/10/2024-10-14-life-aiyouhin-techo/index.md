@@ -2,7 +2,7 @@
 title: "手帳の話し"
 pubDate: 2024-10-14
 description: ""
-coverImage: "DSCF3081.jpg"
+# coverImage:"DSCF3081.jpg"
 ---
 
 例年、この時期になると来年の手帳に話題が出てくるし、SNSでは  

@@ -2,7 +2,7 @@
 title: "フリーランスの開業届"
 pubDate: 2025-04-09
 description: ""
-coverImage: "b952e8d086563c399dfa79137f18208f.png"
+# coverImage:"b952e8d086563c399dfa79137f18208f.png"
 ---
 
 新しい年度が始まった。  

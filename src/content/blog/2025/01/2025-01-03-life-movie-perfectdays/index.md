@@ -2,7 +2,7 @@
 title: "ムーティとパーフェクトデイズ"
 pubDate: 2025-01-03
 description: ""
-coverImage: "101_2071.jpg"
+# coverImage:"101_2071.jpg"
 ---
 
 年明けはムーティーのニューイヤー・コンサートから始まった。  

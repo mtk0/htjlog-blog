@@ -2,7 +2,7 @@
 title: "カメラのことfujifilmX-E4"
 pubDate: 2024-07-07
 description: ""
-coverImage: "DSCF1257-scaled.jpg"
+# coverImage:"DSCF1257-scaled.jpg"
 ---
 
 写真を撮るのが好きで、フィルムのころからパシャパシャと撮っていた。

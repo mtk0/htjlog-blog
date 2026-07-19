@@ -2,7 +2,7 @@
 title: "「山田和樹ベルリン・フィルデビューの意義とは？日本人指揮者が示す音楽の国際性」"
 pubDate: 2025-09-06
 description: ""
-coverImage: "b4c6f3352dff46c062c210494e051018.png"
+# coverImage:"b4c6f3352dff46c062c210494e051018.png"
 ---
 
 ## はじめに ～歴史的瞬間を目撃して～

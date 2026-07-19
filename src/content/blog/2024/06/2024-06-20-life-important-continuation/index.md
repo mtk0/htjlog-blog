@@ -2,7 +2,7 @@
 title: "継続することの大切さ"
 pubDate: 2024-06-20
 description: ""
-coverImage: "101_1144-scaled.jpg"
+# coverImage:"101_1144-scaled.jpg"
 ---
 
 何かひとつのことを続けるということは大変だ。

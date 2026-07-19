@@ -2,7 +2,7 @@
 title: "「ベテランフリーランスが教える｜税金支払いスケジュールの賢い管理法」"
 pubDate: 2025-06-21
 description: ""
-coverImage: "1-2.png"
+# coverImage:"1-2.png"
 ---
 
 はじめに

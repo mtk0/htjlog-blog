@@ -2,7 +2,7 @@
 title: "ミニマリスト"
 pubDate: 2024-06-25
 description: ""
-coverImage: "LRM_20240415_100219-2-scaled.jpg"
+# coverImage:"LRM_20240415_100219-2-scaled.jpg"
 ---
 
 ちょうど去年の今頃、youtubeを見ているとあるミニマリストのチャンネルが  

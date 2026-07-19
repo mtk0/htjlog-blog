@@ -2,7 +2,7 @@
 title: "フリーランス新時代の契約書～法改正を味方につける賢い働き方～"
 pubDate: 2025-07-20
 description: ""
-coverImage: "0720_.png"
+# coverImage:"0720_.png"
 ---
 
 ## はじめに：フリーランスを取り巻く環境の大きな変化

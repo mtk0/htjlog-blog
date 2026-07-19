@@ -2,7 +2,7 @@
 title: "Claude vs ChatGPT：1年間使い続けて見えた真実【前編】"
 pubDate: 2025-08-10
 description: ""
-coverImage: "7593bed6680cf13a4cb38bc81ac7fab3.png"
+# coverImage:"7593bed6680cf13a4cb38bc81ac7fab3.png"
 ---
 
 一昨日だった８月８日にChatGPT5が公開のニュースが出た。  

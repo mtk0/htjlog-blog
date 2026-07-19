@@ -3,7 +3,7 @@ title: 'Cloudflare PagesでWordPressから乗り換えた話'
 description: 'プログラミング未経験でも、AIと対話しながら手を動かせばなんとかなる。WordPressからCloudflare Pages＋Astroへ移行した、50代フリーランスの記録。'
 pubDate: '2026-06-03'
 # updatedDate: ''
-coverImage: '/blog-images/cloudflare-migration.jpg'
+# coverImage:'/blog-images/cloudflare-migration.jpg'
 ---
 
 正直に言うと、このブログをCloudflare Pagesで再構築するまでの道のりは、思っていたよりずっと遠回りだった。

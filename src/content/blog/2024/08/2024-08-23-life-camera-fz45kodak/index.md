@@ -2,7 +2,7 @@
 title: "KODAK FZ45とツイン・ピークス"
 pubDate: 2024-08-23
 description: ""
-coverImage: "101_0344.jpg"
+# coverImage:"101_0344.jpg"
 ---
 
 去年の12月くらいからKODAKのFZ45という小さなカメラを使っている。  

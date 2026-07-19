@@ -2,7 +2,7 @@
 title: "ロベールドアノーとソールライター"
 pubDate: 2025-01-01
 description: ""
-coverImage: "DSCF5057.jpg"
+# coverImage:"DSCF5057.jpg"
 ---
 
 去年は中平卓馬には始まり、ホンマタカシ、ソールライター、ロベール・ドアノーと結構色んな展示に行って来ました。

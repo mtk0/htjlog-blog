@@ -2,7 +2,7 @@
 title: "オート セルサス CB-15C-BK レビュー｜M5手帳との相性が抜群だった愛用ペン"
 pubDate: 2025-08-24
 description: ""
-coverImage: "7072e00be145bb5863fa32740d173d85.png"
+# coverImage:"7072e00be145bb5863fa32740d173d85.png"
 ---
 
 ## ひとつの文具との出会いが、日常を変えることがある

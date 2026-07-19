@@ -2,7 +2,7 @@
 title: "個人事業主と法人、どっちが得？税務・社会保障の賢い選び方"
 pubDate: 2025-07-25
 description: ""
-coverImage: "7a991b5268f3ff83a01ed9eba6df2152.png"
+# coverImage:"7a991b5268f3ff83a01ed9eba6df2152.png"
 ---
 
 個人で事業をしていて少し軌道に乗ってくると「法人化したほうがいいのかな？」と誰しも思うはずです。  

@@ -2,7 +2,7 @@
 title: "iphone16"
 pubDate: 2024-09-27
 description: ""
-coverImage: "101_3123.jpg"
+# coverImage:"101_3123.jpg"
 ---
 
 iphoneを毎年買い替えなくなって何年たったのだろうか。  

@@ -2,7 +2,7 @@
 title: "1％ずつ進む"
 pubDate: 2024-08-15
 description: ""
-coverImage: "DSCF5792.jpg"
+# coverImage:"DSCF5792.jpg"
 ---
 
 最近読んだblogで1%ずつ毎日積み上げると一年でどれくらいになるだろうという内容の記事を目にした。

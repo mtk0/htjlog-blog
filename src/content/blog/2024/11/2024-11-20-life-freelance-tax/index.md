@@ -2,7 +2,7 @@
 title: "フリーランスの税金の話し"
 pubDate: 2024-11-20
 description: ""
-coverImage: "b952e8d086563c399dfa79137f18208f.png"
+# coverImage:"b952e8d086563c399dfa79137f18208f.png"
 ---
 
 フリーランスになると税金はどうなるのでしょう。  

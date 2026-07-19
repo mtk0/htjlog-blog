@@ -2,7 +2,7 @@
 title: "「好きなこと」と「仕事」を分離する〜自分らしさを守るための価値観転換〜"
 pubDate: 2025-08-17
 description: ""
-coverImage: "1.png"
+# coverImage:"1.png"
 ---
 
 ## 変化する働き方の常識

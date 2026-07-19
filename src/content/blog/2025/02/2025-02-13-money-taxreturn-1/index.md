@@ -2,7 +2,7 @@
 title: "フリーランスが楽に確定申告をする方法"
 pubDate: 2025-02-13
 description: ""
-coverImage: "2-1.png"
+# coverImage:"2-1.png"
 ---
 
 フリーランスの確定申告を劇的に楽にする方法 - 20年のベテランが語る実践的アドバイス
