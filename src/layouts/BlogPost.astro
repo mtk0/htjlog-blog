@@ -1,6 +1,6 @@
 ---
-
 import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
@@ -10,6 +10,34 @@ import { Image } from 'astro:assets';
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, coverImage } = Astro.props;
+
+/* ── 記事下ナビ用のデータ準備 ── */
+// 全記事を「新しい順」に並べる
+const allPosts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+// Astroのバージョン差(slug / id)を吸収するヘルパー
+const slugOf = (p: any) => p.slug ?? p.id;
+
+// 表示中の記事を、URLから特定する
+const path = Astro.url.pathname.replace(/\/$/, '');
+const index = allPosts.findIndex((p) => path.endsWith('/' + slugOf(p)));
+const current = index >= 0 ? allPosts[index] : undefined;
+
+// リンクのURLを組み立てる(現在のURLの階層をそのまま流用)
+const base = current ? path.slice(0, path.length - slugOf(current).length) : '/blog/';
+const urlFor = (p: any) => `${base}${slugOf(p)}/`;
+
+// 新しい順に並んでいるので、1つ前 = 新しい記事 / 1つ後 = 前の記事
+const newer = index > 0 ? allPosts[index - 1] : undefined;
+const older =
+	index >= 0 && index < allPosts.length - 1 ? allPosts[index + 1] : undefined;
+
+// 新着5本(表示中の記事は除く)
+const recentPosts = allPosts
+	.filter((p) => !current || slugOf(p) !== slugOf(current))
+	.slice(0, 5);
 ---
 
 <html lang="ja">
@@ -157,6 +185,97 @@ const { title, description, pubDate, updatedDate, coverImage } = Astro.props;
 				border-top: 1px solid rgb(var(--gray-light));
 				margin: 2.5em 0;
 			}
+
+			/* ── 記事下ナビゲーション ── */
+			.post-nav {
+				width: 680px;
+				max-width: calc(100% - 2em);
+				margin: 2em auto 4em;
+				padding: 0 1em;
+			}
+			.pager {
+				display: flex;
+				gap: 1em;
+				border-top: 1px solid rgb(var(--gray-light));
+				padding-top: 1.5em;
+			}
+			.pager-item {
+				flex: 1 1 0;
+				min-width: 0;
+				display: block;
+				padding: 0.9em 1em;
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: 8px;
+				text-decoration: none;
+				color: rgb(var(--gray-dark));
+				background: rgba(var(--gray-light), 0.25);
+				transition: background 0.2s ease;
+			}
+			a.pager-item:hover {
+				background: rgba(var(--gray-light), 0.6);
+			}
+			.pager-item.empty {
+				border: none;
+				background: none;
+			}
+			.pager-label {
+				display: block;
+				font-size: 0.8em;
+				color: rgb(var(--gray));
+				margin-bottom: 0.3em;
+			}
+			.pager-item.next {
+				text-align: right;
+			}
+			.pager-title {
+				display: block;
+				font-size: 0.95em;
+				line-height: 1.5;
+			}
+			.recent {
+				margin-top: 3em;
+			}
+			.recent-heading {
+				font-size: 1.05em;
+				font-weight: 700;
+				margin: 0 0 0.8em;
+				padding-bottom: 0.3em;
+				border-bottom: 1px solid rgb(var(--gray-light));
+			}
+			.recent ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			.recent li {
+				padding: 0.6em 0;
+				border-bottom: 1px dashed rgb(var(--gray-light));
+			}
+			.recent a {
+				color: rgb(var(--gray-dark));
+				text-decoration: none;
+				line-height: 1.6;
+			}
+			.recent a:hover {
+				color: var(--accent);
+			}
+			.recent-date {
+				display: block;
+				font-size: 0.78em;
+				color: rgb(var(--gray));
+				margin-top: 0.2em;
+			}
+			@media (max-width: 640px) {
+				.pager {
+					flex-direction: column;
+				}
+				.pager-item.next {
+					text-align: left;
+				}
+				.pager-item.empty {
+					display: none;
+				}
+			}
 		</style>
 	</head>
 
@@ -187,6 +306,47 @@ const { title, description, pubDate, updatedDate, coverImage } = Astro.props;
 					<slot />
 				</div>
 			</article>
+
+			<nav class="post-nav" aria-label="記事ナビゲーション">
+				<div class="pager">
+					{
+						older ? (
+							<a class="pager-item prev" href={urlFor(older)}>
+								<span class="pager-label">← 前の記事</span>
+								<span class="pager-title">{older.data.title}</span>
+							</a>
+						) : (
+							<span class="pager-item empty" />
+						)
+					}
+					{
+						newer ? (
+							<a class="pager-item next" href={urlFor(newer)}>
+								<span class="pager-label">次の記事 →</span>
+								<span class="pager-title">{newer.data.title}</span>
+							</a>
+						) : (
+							<span class="pager-item empty" />
+						)
+					}
+				</div>
+
+				<div class="recent">
+					<h2 class="recent-heading">最近の記事</h2>
+					<ul>
+						{
+							recentPosts.map((p) => (
+								<li>
+									<a href={urlFor(p)}>{p.data.title}</a>
+									<span class="recent-date">
+										<FormattedDate date={p.data.pubDate} />
+									</span>
+								</li>
+							))
+						}
+					</ul>
+				</div>
+			</nav>
 		</main>
 		<Footer />
 	</body>
